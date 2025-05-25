@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+  
+  <!--head-->
+  
+  <head>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="width=device-width" initial-scale="1.0"/>
+    
+    
+    <title>Login UI Form</title>
+    
+    
+         <!-- CSS link -->
+    
+    <link rel="stylesheet" href="signup.css">
+
+    
+         <!-- favicon -->
+  
+    <link rel="icon" type="icon/favicon" href="images/password_icon.jpg"> 
+    
+    
+         <!-- icon link -->
+        
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+        
+  </head>
+  
+           <!--body-->
+  
+  <body>
+    <div class="container">
+      <div class="sub-container">
+      	
+        <div class="title"><span>Login Form</span></div>
+        
+        <form action="#">
+          
+          <div class="row">
+            <i class="fa fa-user"></i>
+            <input type="text" placeholder="Email or Username" required>
+          </div>
+          
+          
+           <div class="row password-row">
+           	<i class="fa fa-lock"></i>
+           	<input type="password" id="pass" placeholder="Password" required oninput="checkPassword()">
+           	<i class="fa fa-eye" id="togglePasswords" onclick="togglePasswords()"></i>
+          </div>
+          
+          
+           <div class="pass"><a href="message.html">Forgot password? </a>
+           </div>
+           
+           <p id="message" class="message"><i class="fa" id="message-icon"></i> <span id="message-text"></span></p>
+           
+           <div class="button">
+            <button type="button" onclick="checkPassword()">Login</button>
+          </div>
+           
+            
+           <div class="signup-link"><span>New Member?   </span><a href="signup.html">Sign-Up Here</a>
+           </div>
+           
+           <p>Or</p>
+
+           <div class="separator">
+            <span>Sign Up With</span>
+           </div>
+           
+           <div class="icons">
+             <a href="https://accounts.google.com"><i class="fa-brands fa-google">
+             </i><br>Google</a>
+              <a href="https://www.github.com"><i class="fa-brands fa-github"></i><br>Github</a>
+              
+              <!--
+              <a href="https://www.twitter.com"><i class="fa-brands fa-x-twitter"></i>Twitter</a>
+              <a href="https://www.stackoverflow.com"><i class="fa-brands fa-codiepie"></i>Codiepie</a>
+              -->
+              
+           </div>
+          
+        </form>
+      </div>
+    </div>
+    
+   <script src="signup.js" type="text/javascript" charset="utf-8"></script>
+  </body>
+</html> 
+
+    
+    <!--internal js for the password validation & visibility... it's similar to the main file.... it was mainly used for checking during coding. So I decided to leave it
+    
+    <script>
+    
+ function checkPassword() {
+	  const password = document.getElementById("pass").value;
+	  const icon = document.getElementById("message-icon");
+    const text = document.getElementById("message-text");
+    const message = document.getElementById("message");
+  
+  function showMessage(iconClass, color, msg) {
+    icon.className = `fa ${iconClass}`;
+    message.style.color = color;
+    text.textContent = msg;
+  }
+  
+    if (password.length < 8) {
+  	showMessage("fa-exclamation-circle", "white", "Password must be at least 8 characters long.");
+    return;
+    }
+  
+  showMessage("fa-check-circle", "lightgreen", "Password is valid and matches!");
+  	
+  }
+  
+ function togglePassword() {
+    const pass = document.getElementById("pass");
+    const toggleIcon = document.getElementById("togglePassword");
+
+  if (pass.type === "password") {
+    pass.type = "text";
+    toggleIcon.classList.remove("fa-eye");
+    toggleIcon.classList.add("fa-eye-slash");
+  } else {
+    pass.type = "password";
+    toggleIcon.classList.remove("fa-eye-slash");
+    toggleIcon.classList.add("fa-eye");
+  }
+}
+    </script>
+    -->

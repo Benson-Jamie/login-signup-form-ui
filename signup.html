@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+  
+  <!--head-->
+  <head>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="width=device-width" initial-scale="1.0"/>
+    <title>Sign Up Form</title>
+    
+         <!-- CSS link -->
+    
+    <link rel="stylesheet" href="signup.css">
+    
+          <!-- favicon -->
+  
+    <link rel="icon" type="icon/favicon" href="images/password_icon.jpg"> 
+    
+         <!-- icon link -->
+    
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  </head>
+  
+  <!--body-->
+  <body>
+    <div class="container">
+      
+      <div class="sub-container">
+        
+        <div class="title"><span>SignUp Form</span>
+        </div>
+        
+        <form action="#">
+          
+          <div class="row">
+            <i class="fa fa-user"></i>
+            <input type="text" placeholder="Enter your Firstname" required>
+          </div>
+          
+          <div class="row">
+            <i class="fa fa-user"></i>
+            <input type="text" placeholder="Enter your Lastname" required>
+          </div>
+          
+          <div class="row">
+            <i class="fa fa-envelope"></i>
+            <input type="email" placeholder="Enter your Email" required>
+          </div>
+          
+           <div class="row password-row">
+           	<i class="fa fa-lock"></i>
+           <input type="password" id="passwordInput" placeholder="Password" required oninput="checkPassword()">
+           <i class="fa fa-eye" id="togglePassword" onclick="togglePassword()"></i>
+          </div>
+          
+          
+           <div class="row password-row">
+           	<i class="fa fa-lock"></i>
+           	<input type="password" id="passwordIn" placeholder="Confirm your Password" required oninput="checkPassword()">
+           	<i class="fa fa-eye" id="togglePass" onclick="togglePass()"></i>
+          </div>
+          
+          <div class="pass">
+             <input type="checkbox" value=""><p>I accept all terms and conditions</p>
+          </div>
+           
+           
+             <p id="message" class="message"><i class="fa fa-dropbox" id="message-icon"></i> <span id="message-text"></span></p>
+             
+             
+          <div class="row button">
+            <button type="button" onclick="checkPassword()"></a>SignUp</button>
+          </div>
+            
+            
+          
+           <div class="signup-link"><span>Already have an account</span><a href="login.html">Login Here</a>
+           </div>
+           
+           
+           <div class="separator">
+             <span>or login with</span>
+           </div>
+           
+           <div class="icons">
+             
+             <div>
+             <a href="https://www.github.com"><i class="fa fa-github"></i> Github</a>
+             </div>
+             
+             <div>
+              <a href="https://www.google.com"><i class="fa fa-google"></i> Google</a>
+              </div>
+    
+           </div>
+           
+            <div class="last">
+                <a href="">Read Terms and Conditions</a>
+            </div>
+          
+        </form>
+      </div>
+    </div>
+    <script src="signup.js"></script>
+  </body>
+</html>
